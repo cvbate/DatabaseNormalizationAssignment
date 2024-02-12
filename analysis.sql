@@ -38,15 +38,23 @@ INSERT INTO Pets (PetID, PetName) VALUES
 (2, 'Nemy'),
 (3, 'Jaya');
 
-INSERT INTO Pet_Descrip (DescripID, Descrip) VALUES
+INSERT INTO Pet_Descrip (PetID, Descrip) VALUES
 (1,'Female'),
+(1,'Cat'),
+(1,'Black and White'),
+(1,'Cute'),
 (2,'Male'),
-(3,'Cat'),
-(4,'Dog'),
-(5,'Black and White'),
-(6,'Black'),
-(7,'Cute')
+(2,'Cat'),
+(2,'Black'),
+(2,'Cute'),
+(3,'Female'),
+(3,'Dog'),
+(3,'Black'),
+(3,'Cute')
 ;
 
 
 --Female = 1 Male = 2, 3 = cat, 4 = dog, 5 = Black and White, 6 = Black, 7 = Cute
+
+
+---In Part 2: Advancing to 2N
