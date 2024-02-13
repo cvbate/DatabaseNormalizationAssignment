@@ -53,8 +53,30 @@ INSERT INTO Pet_Descrip (PetID, Descrip) VALUES
 (3,'Cute')
 ;
 
+-- https://www.geeksforgeeks.org/sql-alter-rename/
+ALTER TABLE Pet_Descrip
+RENAME TO Descrip;
 
+
+
+CREATE TABLE Pet_Descrip (
+DescripID SERIAL PRIMARY KEY,
+PetName VARCHAR(255)
+);
+
+ALTER TABLE Descrip ADD COLUMN PetDescripID INT;
+
+
+ALTER TABLE Descrip
+ADD CONSTRAINT fk_PetDescripID FOREIGN KEY (PetDescripID) REFERENCES Pet_Descrip(DescripID);
 --Female = 1 Male = 2, 3 = cat, 4 = dog, 5 = Black and White, 6 = Black, 7 = Cute
 
 
 ---In Part 2: Advancing to 2N
+/* Task 2.1: Identify Partial Dependencies
+Analyze the 1NF table to identify any partial dependencies, where some columns depend only on a part of the primary key in
+case of composite primary keys.
+Task 2.2: Create Related Tables to Achieve 2NF
+Eliminate partial dependencies by creating separate tables.
+Establish relationships using foreign keys. */
+
