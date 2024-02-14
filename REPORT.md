@@ -31,11 +31,15 @@ Challenges:
 - orignally named Descrip Pets_Descrip, so I had to change it 
 
 
-Screneshots of tables
-![Pets_Ive_Had Table](Pets_Ive_Had_table1.png)
-![Pets Table](Pets_table2.png)
-![Pet_Descrip Table](Pet_Descrip_table3.png)
-![Descrip Table](Descrip_table4.png)
+Screneshots of tables  
+Pets_Ive_Had Table:  
+![Pets_Ive_Had Table](Pets_Ive_Had_table1.png)  
+Pets Table:  
+![Pets Table](Pets_table2.png)  
+Pet_Descrip:  
+![Pet_Descrip Table](Pet_Descrip_table3.png)  
+Descrip:  
+![Descrip Table](Descrip_table4.png)  
 
 Para hacer antes de que yo lo entrege:
 1. process and rational
