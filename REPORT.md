@@ -8,10 +8,10 @@ The full assignment instructions can be found on the class website, [here](https
 1. analysis.sql : SQL script for creating and normalizing tables
 1. Report.MD (this document): A Markdown or text file containing your normalization report.
 1. Screenshots showing your final table structures in pgAdmin or the command-line outputs.  
-- Pets_Ive_Had_table1 = orignal table 
-- Pets_table2 = lists pets with PetID as primary key
-- Pets_Descrip_table3 = lists decriptions with DescripID as primary key
-- Descrip_table4  = 2NF = 
+    - Pets_Ive_Had_table1 = orignal table 
+    - Pets_table2 = lists pets with PetID as primary key
+    - Pets_Descrip_table3 = lists decriptions with DescripID as primary key
+    - Descrip_table4  = 2NF  
 
 
 In REPORT.md or REPORT.txt, explain the process and rationale behind normalizing your database to 1NF and then to 2NF. Include any challenges faced and how you addressed them.
@@ -24,14 +24,14 @@ Descrip = Facilities
 Descriptions = FacilityName
 
 
-Methods
+### Methods
 
-Challenges:
+### Challenges:
 - i had named all my columns descrip instead of descriptions  
 - orignally named Descrip Pets_Descrip, so I had to change it 
 
 
-Screneshots of tables  
+### Screneshots of tables  
 Pets_Ive_Had Table:  
 ![Pets_Ive_Had Table](Pets_Ive_Had_table1.png)  
 Pets Table:  
