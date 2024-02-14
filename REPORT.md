@@ -10,9 +10,9 @@ The data example given to us for the assignment was a simple table called Parks 
 - Pet_Descrip = ParkFacilities
 - Descrip = Facilities
 - Descriptions = FacilityName (this is a column) 
-
+  
 Often when a database is not normalized, when there are multiple values within a column or there are partial dependencies, issues will arise when trying to preform an analysis as some of the data may not be easily accessable. Esentilly normalization increases the efficiency and integrity of a database.
-
+  
 ### This repository includes
 1. analysis.sql : SQL script that created and normaled tables
 1. REPORT.MD (this document): A Markdown file containing the Normalization Report.
@@ -21,8 +21,7 @@ Often when a database is not normalized, when there are multiple values within a
     - Pets_table2 = lists pets with PetID as primary key = 1NF
     - Pets_Descrip_table3 = lists decriptions with DescripID as primary key  = 1NF
     - Descrip_table4  = 2NF
-
-
+  
 ### Methods
 Part 1 1NF  
 1. Create a non-normalized table called Pets_ive_had that contains three columns, OrderID, PetName, and Descriptions
@@ -41,12 +40,16 @@ Part 2 2NF
 1. Drop the column Descriptions from Descrip
 1. (Optional) rename the table Descrip to MyPets_Descriptions_3NF 
 
-
-### Challenges:
-- i had named all my columns descrip instead of descriptions  
-- orignally named Descrip Pets_Descrip, so I had to change it   
   
+### Challenges:
+Using my own variables instead of the Park/Facilities variables used in the example in the assignment instructions added a layer of difficulty, however I found that it also increased my understanding of what was happening in the tables, because I had to think harder about how these examples were applied to my variables. Due to this I also had to think carefully about what I would name each table and column- and actually had to rename some of my tables/ columns to be more intuitive. 
+For example, I orignally named all of the "Descriptions" columns "Descrip- which is the name of one my tables, so when it came down to Update Descrip with the DescripID fom Pet_Discrip my code looked like this:  
+UPDATE Descrip
+SET PetDescripID = (SELECT DescripID FROM Pet_Descrip WHERE Descrip = Descrip.Descrip);  
+I never ran this code because I took one look at at "Descript = Descrip.Descrip" and 1. was confused as to what was happening and 2. Doubted it would even work.
+Additionally, I had originaly named Descrip "Pets_Descrip" because I wanted to mark it as being assoicated with the Pets/Pet_Ive_Had tables, but decided to rename it Descrip, so that I could name the FacilitiesPark equvilant table Pets_Descrip. That is why at the end I renamed my Descripts table to MyPets_Descriptions_3NF. There are a few other tables in the Postgres database so I wanted it to be intuitive by name alone that these four tables are related.
 
+   
 ### Screneshots of tables:
 Pets_Ive_Had_table1:  
 ![Pets_Ive_Had Table](Pets_Ive_Had_table1.png)  
@@ -56,10 +59,3 @@ Pet_Descrip_table3:
 ![Pet_Descrip Table](Pet_Descrip_table3.png)  
 Pets and their Descriptions 3NF (Descrip_table4):  
 ![Descrip Table](Descrip_table4.png)  
-
-Para hacer antes de que yo lo entrege:
-1. process and rational
-2. challenges
-    - i had named all my columns descrip instead of descriptions and had orignally named Descrip Pets_Descrip, so I had to change it 
-3. ~~cambiar el nombre de este documento de README.md a REPORT.md~~
-4. ~~añadir las fotitos~~
