@@ -31,6 +31,7 @@ Part 1 1NF
 1. Populate the table Pets with PetID, and PetName- the same as Pets_ive_Had
 1. Create a table called Descrip with three columns; DescripID, PetID, and Descriptions 
 1. Populate the table Descrip with the PetID from Pets and the corresponding descriptions - now we have two 1NF tables, Descrip and Pets  
+  
 Part 2 2NF    
 1. Create table called Pet_Descrip with two columns; DescripID and Descrip to hold the IDs that correspond to the Pet Descriptions
 1. Populate the Pet Descrip with DescripID and the corresponding descriptions for the three pets - this is a 3rd 1NF table
