@@ -44,8 +44,8 @@ Part 2: 2NF
 ### Challenges:
 Using my own variables instead of the Park/Facilities variables used in the example in the assignment instructions added a layer of difficulty, however I found that it also increased my understanding of what was happening in the tables, because I had to think harder about how these examples were applied to my variables. Due to this I also had to think carefully about what I would name each table and column- and actually had to rename some of my tables/ columns to be more intuitive. 
 For example, I orignally named all of the "Descriptions" columns "Descrip- which is the name of one my tables, so when it came down to Update Descrip with the DescripID fom Pet_Discrip my code looked like this:  
-` UPDATE Descrip  
-SET PetDescripID = (SELECT DescripID FROM Pet_Descrip WHERE Descrip = Descrip.Descrip);`  
+` UPDATE Descrip `  
+` SET PetDescripID = (SELECT DescripID FROM Pet_Descrip WHERE Descrip = Descrip.Descrip);`   
 I never ran this code because I took one look at at "Descript = Descrip.Descrip" and 1. was confused as to what was happening and 2. Doubted it would even work.  
 Additionally, I had originaly named Descrip "Pets_Descrip" because I wanted to mark it as being assoicated with the Pets/Pet_Ive_Had tables, but decided to rename it Descrip, so that I could name the FacilitiesPark equvilant table Pets_Descrip. That is why at the end I renamed my Descripts table to MyPets_Descriptions_3NF. There are a few other tables in the Postgres database so I wanted it to be intuitive by name alone that these four tables are related.
 
