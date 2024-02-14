@@ -1,23 +1,23 @@
 # Database Normalization using PostgreSQL with PostGIS Extension 
 ## Spatial Databases IDCE 376 | Assignment 2: | Clio Bate | 02/14/2024
 
-This project was created as part of the class, Spatial Databases at Clark University Spring, 2024. The objective of this assignent is to introduce database normalization and implement these concepts by creating a non-normal database, and normalizing it to 1NF and 2NF. To write and implement the SQL script I used the SQLShell to interact with PGAdmin and used VSCode to manage my repository and save my SQL script.     
+This project was created as part of the class Spatial Databases at Clark University Spring, 2024. The objective of this assignent is to introduce and implement the concept of database normalization by creating a non-normal database and normalizing it to 1NF and 2NF. To write and implement the SQL script I used the SQLShell to interact with PGAdmin and used VSCode to manage my repository and store my SQL script.     
 The full assignment instructions can be found on the class website, [here](https://studyingplace.space/spatial-database/labs/A2-Database_Normalization.html)  
 
-The data example given to us for the assignment was a simple table called Parks in which three parks were listed along with the facilities they each posessed (ex. restroom, playground etc.). I decided to use diffent varibales,'Pets' instead of 'parks' and 'descriptions' instead of 'facilities'. This proved to be an additional challenges, as will be discussed in the challenges section further down in this document. The full list of subistutions is bellow:
+The data example given to us for the assignment was a simple table called Parks in which three parks were listed along with the facilities they each posessed (ex. restroom, playground etc.). I decided to use diffent varibales,'Pets' instead of 'parks' and 'descriptions' instead of 'facilities'. This proved to be an additional challenge, as will be discussed in the challenges section further down in this document. The full list of name subistutions is bellow:
 - Pets_Ive_Had = Parks_info
-- Parks = Pets
+- Pets = Parks
 - Pet_Descrip = ParkFacilities
 - Descrip = Facilities
 - Descriptions = FacilityName (this is a column) 
 
-Often when a database is not normalized, when there are multiple values within a column or there are partial dependencies, issues will arise when trying to preform an analysis. Esentilly normalization increases the efficiency and integrity of a database.
+Often when a database is not normalized, when there are multiple values within a column or there are partial dependencies, issues will arise when trying to preform an analysis as some of the data may not be easily accessable. Esentilly normalization increases the efficiency and integrity of a database.
 
 ### This repository includes
 1. analysis.sql : SQL script that created and normaled tables
-1. REPORT.MD (this document): A Markdown file containing the normalization report.
-1. Screenshots showing my final table structures in pgAdmin.  
-    - Pets_Ive_Had_table1 = orignal table 
+1. REPORT.MD (this document): A Markdown file containing the Normalization Report.
+1. Screenshots showing the structures of my final tablesin pgAdmin. The screenshots of each table includes:  
+    - Pets_Ive_Had_table1 = 'orignal' table 
     - Pets_table2 = lists pets with PetID as primary key = 1NF
     - Pets_Descrip_table3 = lists decriptions with DescripID as primary key  = 1NF
     - Descrip_table4  = 2NF
@@ -41,9 +41,6 @@ Part 2 2NF
 1. Drop the column Descriptions from Descrip
 1. (Optional) rename the table Descrip to MyPets_Descriptions_3NF 
 
-These steps are from 
-
-
 
 ### Challenges:
 - i had named all my columns descrip instead of descriptions  
@@ -51,13 +48,13 @@ These steps are from
   
 
 ### Screneshots of tables:
-Pets_Ive_Had Table:  
+Pets_Ive_Had_table1:  
 ![Pets_Ive_Had Table](Pets_Ive_Had_table1.png)  
-Pets Table:  
+Pets_table2:  
 ![Pets Table](Pets_table2.png)  
-Pet_Descrip:  
+Pet_Descrip_table3:  
 ![Pet_Descrip Table](Pet_Descrip_table3.png)  
-Pets and their Descriptions 3NF (Descrip):  
+Pets and their Descriptions 3NF (Descrip_table4):  
 ![Descrip Table](Descrip_table4.png)  
 
 Para hacer antes de que yo lo entrege:
